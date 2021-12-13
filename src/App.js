@@ -11,6 +11,7 @@ function App() {
           <Component2ToReadContext />
         </div>
       </ThemeProvider>
+      <div></div>
     </>
   );
 }
