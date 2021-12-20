@@ -7,7 +7,6 @@ import Layout from "./Layout";
 const MySelect = styled(Form.Select)`
   width: 300px;
   color: black;
-  height: 200px;
 `;
 
 const Home = () => {

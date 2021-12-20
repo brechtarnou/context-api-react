@@ -1,13 +1,12 @@
-import { useContext } from "react";
 import Dashboard from "./component/Dashboard";
 import Home from "./component/Home";
 import About from "./component/About";
 import { Router } from "@reach/router";
-import { ThemeContext } from "./context/ThemeContext";
+
+import { database } from "./utils/database";
 
 function App() {
-  const { theme } = useContext(ThemeContext);
-  console.log(theme);
+  console.log(database);
   return (
     <div className="App">
       <Router>
