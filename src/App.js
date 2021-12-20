@@ -1,18 +1,21 @@
-import { ThemeProvider } from "./context/ThemeContext";
-import ComponentToReadContext from "./component/ComponentToReadContext";
-import Component2ToReadContext from "./component/Component2ToReadContext";
+import { useContext } from "react";
+import Dashboard from "./component/Dashboard";
+import Home from "./component/Home";
+import About from "./component/About";
+import { Router } from "@reach/router";
+import { ThemeContext } from "./context/ThemeContext";
 
 function App() {
+  const { theme } = useContext(ThemeContext);
+  console.log(theme);
   return (
-    <>
-      <ThemeProvider>
-        <div className="App">
-          <ComponentToReadContext />
-          <Component2ToReadContext />
-        </div>
-      </ThemeProvider>
-      <div></div>
-    </>
+    <div className="App">
+      <Router>
+        <Home path="/" />
+        <Dashboard path="/dashboard" />
+        <About path="/about" />
+      </Router>
+    </div>
   );
 }
 
