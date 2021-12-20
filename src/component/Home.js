@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Form } from "react-bootstrap";
 import styled from "styled-components";
 import { ThemeContext } from "../context/ThemeContext";
+
 import Layout from "./Layout";
 
 const MySelect = styled(Form.Select)`
@@ -16,7 +17,9 @@ const Home = () => {
     <Layout>
       <MySelect
         aria-label="Default select example"
-        onChange={(e) => setTheme(e.target.value)}
+        onChange={(e) => {
+          setTheme(e.target.value);
+        }}
         value={theme}
       >
         <option value="white">Light</option>

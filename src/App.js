@@ -3,10 +3,7 @@ import Home from "./component/Home";
 import About from "./component/About";
 import { Router } from "@reach/router";
 
-import { database } from "./utils/database";
-
 function App() {
-  console.log(database);
   return (
     <div className="App">
       <Router>
